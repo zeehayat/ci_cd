@@ -22,5 +22,9 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
-
+    public function test_that_add_is_true(){
+        $result=2+2;
+        
+        $this->assertEquals(4,$result);
+    }
 }
