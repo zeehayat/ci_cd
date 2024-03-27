@@ -38,4 +38,11 @@ jobs:
     - name: Run Tests
       run: vendor/bin/phpunit
     - name: Deployment Stage 1
-      run: tar -czf app.tar.gz --exclude=*.git --exclude=node_modules * 
+      env: GITHUB_SHA: ${{github.sha}}
+      run: tar -czf '${GITHUB_SHA}'.tar.gz --exclude=*.git --exclude=node_modules * 
+
+    - name: Upload Application
+      uses: actions/upload-artifacts@v2
+      with:
+        name: app-build
+        path:${{github.sha}}.tar.gz
