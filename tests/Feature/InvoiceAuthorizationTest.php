@@ -17,5 +17,11 @@ class InvoiceAuthorizationTest extends TestCase
 
         $response->assertStatus(200);
     }
-    
+    public function test_is_this_correct(){
+        $name="jane";
+        $adj="jane";
+        
+        $this->assertTrue($name===$adj);
+    }
+
 }
