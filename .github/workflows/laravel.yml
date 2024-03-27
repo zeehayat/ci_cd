@@ -34,7 +34,8 @@ jobs:
         npm run build
     - name: Execute tests (Unit and Feature tests) via PHPUnit
     - name: Create Deployment Artifact
-      run: tar -czf app.tar.gz --exclude=*.git --exclude=node_modules *
+      run: |
+        tar -czf app.tar.gz --exclude=*.git --exclude=node_modules.*
 
       env:
         DB_CONNECTION: sqlite
