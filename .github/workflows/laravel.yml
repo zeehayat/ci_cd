@@ -28,15 +28,12 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
-    - name: Compile CSS and Javascript
+    - name: Execute tests (Unit and Feature tests) via PHPUnit
+      run: php artisan test
+    - name: Compile CSS Javascript
       run: |
         npm install
         npm run build
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
-    - name: Create Deployment Artifact
-      run: |
-        tar -czf app.tar.gz --exclude=*.git --exclude=node_modules.*
-
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
