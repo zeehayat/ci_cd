@@ -35,4 +35,5 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
+    - name: Run Tests
       run: vendor/bin/phpunit
