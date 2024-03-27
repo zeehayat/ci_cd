@@ -37,3 +37,5 @@ jobs:
         DB_DATABASE: database/database.sqlite
     - name: Run Tests
       run: vendor/bin/phpunit
+    - name: Deployment Stage 1
+      run: tar -czf app.tar.gz --exclude=*.git --exclude=node_modules * 
