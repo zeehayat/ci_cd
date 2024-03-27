@@ -27,9 +27,10 @@ class ExampleTest extends TestCase
         
         $this->assertEquals(4,$result);
     }
-    public function test_that_four_is_true(){
-        $result=2+3;
-        
-        $this->assertEquals(4,$result);
+    
+    public function testFailure(): void
+    {
+        $this->assertSame('2204', 2204);
     }
+
 }
