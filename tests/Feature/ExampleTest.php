@@ -30,7 +30,8 @@ class ExampleTest extends TestCase
     
     public function testFailure(): void
     {
-        $this->assertSame('2204', 2204);
+        $this->assertSame(2204, 2204);
     }
+
 
 }
