@@ -56,4 +56,4 @@ jobs:
             npm ci
             npm run prod
             composer i
-            php artisan migrate --force
+            php artisan migrate --force 
