@@ -50,8 +50,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
           script: |
-            cd apps
-            cd laravel-example
+            # cd apps
+            # cd laravel-example
             git pull
             npm ci
             npm run prod
