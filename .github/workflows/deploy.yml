@@ -54,6 +54,6 @@ jobs:
             # cd laravel-example
             git pull
             npm ci
-            npm run prod
+            npm run build
             composer i
             php artisan migrate --force 
