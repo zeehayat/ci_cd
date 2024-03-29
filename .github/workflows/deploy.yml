@@ -52,6 +52,7 @@ jobs:
           script_stop: true
           script: |
             cd ~/public_html
+            pwd
             git pull
             npm ci
             npm run build
