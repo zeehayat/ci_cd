@@ -51,8 +51,7 @@ jobs:
           password: ${{ secrets.SSH_PW }}
           script_stop: true
           script: |
-            # cd apps
-            # cd laravel-example
+            cd ~/public_html
             git pull
             npm ci
             npm run build
