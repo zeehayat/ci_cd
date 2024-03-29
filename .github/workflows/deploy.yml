@@ -57,4 +57,4 @@ jobs:
             npm ci
             npm run build
             composer i
-            php artisan migrate --force
+            php artisan migrate:fresh --force
