@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.SSH_PW }}
           script_stop: true
           script: |
-            cd ~/public_html
+            cd /home/zeenuxinfo/public_html
             pwd
             git pull
             npm ci
