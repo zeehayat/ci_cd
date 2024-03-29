@@ -48,6 +48,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PW }}
           script_stop: true
           script: |
             # cd apps
